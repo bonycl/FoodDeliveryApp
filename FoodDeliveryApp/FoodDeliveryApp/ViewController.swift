@@ -16,7 +16,7 @@ class ViewController: UIViewController {
        
         let label = UILabel()
         label.text = "Hello World!"
-        label.textColor = .white
+        label.textColor = AppColors.accentOrange
         label.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(label)
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
         ])
         
-        label.font = UIFont.roboto(ofSize: 40, weight: .bold)
+        label.font = UIFont.roboto(ofSize: 40, weight: .thinItalic)
         
-        view.backgroundColor = .lightGray
+        view.backgroundColor = AppColors.backgroundColor
     }
 
 
