@@ -12,7 +12,7 @@ class HomeCoordinator: Coordinator {
     override func start() {
         print("HomeCoordinator start")
         let vc = ViewController()
-        vc.view.backgroundColor = .red
+        vc.view.backgroundColor = .gray
         navigationController?.pushViewController(vc, animated: true)
     }
     override func finish() {
