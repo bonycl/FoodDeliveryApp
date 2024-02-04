@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) { 
         //1. Захват сцены
@@ -19,16 +19,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //2. Создание UIWindow с исп конструктора который принимает сцену
         let window = UIWindow(windowScene: windowScene)
         
-        let vc = ViewController()
-        
-        let navigation = UINavigationController(rootViewController: vc)
-        
+//        let vc = ViewController()
+//        let navigation = UINavigationController(rootViewController: vc)
+        let navigationController = UINavigationController()
         //3. Создаем базовый контроллер
-        window.rootViewController = navigation
+        window.rootViewController = navigationController
         
         //4. Настройка window
         self.window = window
-        self.window?.makeKeyAndVisible()    }
+        self.window?.makeKeyAndVisible()
+        let appCoordinator = AppCoordinator(type: .app, navigationController: navigationController)
+        appCoordinator.start()
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
