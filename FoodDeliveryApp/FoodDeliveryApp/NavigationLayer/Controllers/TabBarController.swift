@@ -25,6 +25,7 @@ class TabBarController: UITabBarController {
         
         tabBar.backgroundColor = AppColors.backgroundColor
         tabBar.tintColor = AppColors.accentOrange
+       
         
         
     }
