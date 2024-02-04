@@ -22,6 +22,7 @@
 		020312A62B6CEBBF0069BCC3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 020312992B6CEBBF0069BCC3 /* Roboto-Black.ttf */; };
 		020312A82B6D13F90069BCC3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020312A72B6D13F90069BCC3 /* UIColor+Extension.swift */; };
 		020312AB2B6D15FE0069BCC3 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020312AA2B6D15FE0069BCC3 /* AppColors.swift */; };
+		020312B02B6F5CAB0069BCC3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020312AF2B6F5CAB0069BCC3 /* Coordinator.swift */; };
 		0288C0F62B6925CC009275C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288C0F52B6925CC009275C4 /* AppDelegate.swift */; };
 		0288C0F82B6925CC009275C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288C0F72B6925CC009275C4 /* SceneDelegate.swift */; };
 		0288C0FA2B6925CC009275C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288C0F92B6925CC009275C4 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		020312992B6CEBBF0069BCC3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		020312A72B6D13F90069BCC3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		020312AA2B6D15FE0069BCC3 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		020312AF2B6F5CAB0069BCC3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0288C0F22B6925CC009275C4 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0288C0F52B6925CC009275C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0288C0F72B6925CC009275C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,30 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		020312AC2B6F5C530069BCC3 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				020312AE2B6F5C890069BCC3 /* Coordinators */,
+				020312AD2B6F5C810069BCC3 /* Controllers */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		020312AD2B6F5C810069BCC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		020312AE2B6F5C890069BCC3 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				020312AF2B6F5CAB0069BCC3 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		0288C0E92B6925CC009275C4 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +132,7 @@
 		0288C0F42B6925CC009275C4 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				020312AC2B6F5C530069BCC3 /* NavigationLayer */,
 				02E8ABEE2B6CC7A0002C33C3 /* Resourses */,
 				0288C0F52B6925CC009275C4 /* AppDelegate.swift */,
 				0288C0F72B6925CC009275C4 /* SceneDelegate.swift */,
@@ -233,6 +260,7 @@
 				020312AB2B6D15FE0069BCC3 /* AppColors.swift in Sources */,
 				0288C0F82B6925CC009275C4 /* SceneDelegate.swift in Sources */,
 				020312A82B6D13F90069BCC3 /* UIColor+Extension.swift in Sources */,
+				020312B02B6F5CAB0069BCC3 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
