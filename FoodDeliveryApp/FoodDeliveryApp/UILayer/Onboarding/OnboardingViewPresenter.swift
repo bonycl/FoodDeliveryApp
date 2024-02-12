@@ -22,10 +22,10 @@ class OnboardingViewPresenter: OnboardingViewOutput {
         self.coordinator = coordinator
     }
     
-    
+    //TODO: uncomment 
     func onboardingFinish() {
         coordinator.finish()
-        userStorage.passedOnboarding = true
+//        userStorage.passedOnboarding = true
     }
     
     

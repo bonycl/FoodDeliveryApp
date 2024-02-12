@@ -12,6 +12,7 @@ class OnboardingViewController: UIViewController {
     
     //MARK: - Properties
     private var pages = [OnboardingPartViewController]()
+    private var currentPageIndex = 0
     
     //MARK: - Views
     private var pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -33,7 +34,6 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         setupPageViewController()
         setupPageControl()
         setupButton()
@@ -58,7 +58,7 @@ private extension OnboardingViewController {
             pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true)
             bottomButton.setTitle(pages[3].buttonText, for: .normal)
         case 3:
-            print("exit")
+            print("debug: Exit onboarding")
             viewOutput.onboardingFinish()
         default: break
         }
@@ -138,12 +138,18 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 //MARK: - UIPageViewControllerDelegate
 extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {
-            pageControl.currentPage = index
-            let page = pages[index]
+        
+        if let index = pages.firstIndex(of: pendingViewControllers.first as! OnboardingPartViewController) {
+            currentPageIndex = index
+        }
+        
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            pageControl.currentPage = currentPageIndex
+            let page = pages[currentPageIndex]
             let title = page.buttonText
             bottomButton.setTitle(title, for: .normal)
-            
         }
     }
 }
