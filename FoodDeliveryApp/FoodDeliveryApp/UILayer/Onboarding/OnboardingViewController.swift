@@ -18,7 +18,7 @@ class OnboardingViewController: UIViewController {
     private let pageControl = UIPageControl()
     private let bottomButton = UIButton()
     
-    weak var viewOutput: OnboardingViewOutput!
+    var viewOutput: OnboardingViewOutput!
     
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController](), viewOutput: OnboardingViewOutput!) {
         self.pages = pages
@@ -59,6 +59,7 @@ private extension OnboardingViewController {
             bottomButton.setTitle(pages[3].buttonText, for: .normal)
         case 3:
             print("exit")
+            viewOutput.onboardingFinish()
         default: break
         }
     }
