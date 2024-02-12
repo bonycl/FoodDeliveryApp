@@ -12,4 +12,5 @@ enum AppColors {
     static let grey = UIColor().hex(0xECF0F1)
     static let black = UIColor().hex(0x000000)
     static let backgroundColor = UIColor().hex(0xFFFFFF)
+    static let white = UIColor.white
 }
