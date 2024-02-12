@@ -27,10 +27,15 @@ class OnboardingPartViewController: UIViewController {
         }
     }
     
+    var buttonText: String?
+    
+  
+    
     //MARK: - View
     private let imageView = UIImageView()
     private let titlelabel = UILabel()
     private let descriptionLabel = UILabel()
+   
     
     
     //MARK: - LifeCycle
@@ -49,6 +54,7 @@ private extension OnboardingPartViewController {
         setupImageView()
         setupTitleLabel()
         setupDescription()
+       
     }
     
     func setupView() {
@@ -89,7 +95,6 @@ private extension OnboardingPartViewController {
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
     
-        
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(equalTo: titlelabel.bottomAnchor, constant: 23),
             
@@ -97,4 +102,5 @@ private extension OnboardingPartViewController {
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -72)
         ])
     }
+    
 }
